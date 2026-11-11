@@ -1,0 +1,9 @@
+# Cache headers for Netlify / Cloudflare Pages (ignored by other hosts).
+/assets/styles.css
+  Cache-Control: public, max-age=31536000, immutable
+/assets/main.js
+  Cache-Control: public, max-age=31536000, immutable
+/assets/img/*
+  Cache-Control: public, max-age=604800
+/assets/docs/*
+  Cache-Control: public, max-age=3600
