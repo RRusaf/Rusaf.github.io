@@ -45,6 +45,8 @@ const icon = {
 const hash = (f) => crypto.createHash('md5').update(fs.readFileSync(f)).digest('hex').slice(0, 8);
 const CSS = `/assets/styles.css?v=${hash('src/styles.css')}`;
 const JS = `/assets/main.js?v=${hash('src/main.js')}`;
+const RESUME = `${site.resume.file}?v=${hash('public' + site.resume.file)}`;
+const RESUME_PREVIEW = { ...site.resume.preview, src: `${site.resume.preview.src}?v=${hash('public' + site.resume.preview.src)}` };
 
 // ── layout ─────────────────────────────────────────────────────────────────
 const NAV = [['about', 'About'], ['work', 'Work'], ['education', 'Education'], ['leadership', 'Leadership'], ['skills', 'Skills'], ['contact', 'Contact']];
@@ -342,7 +344,7 @@ ${header({ home: true })}
       </div>
       <p class="row">
         ${site.socials.map((s) => `<a class="btn ghost light" href="${esc(s.href)}" target="_blank" rel="noopener noreferrer">${s.label} ${icon.ext}<span class="sr-only"> (opens in a new tab)</span></a>`).join('')}
-        <a class="btn ghost light" href="${u(site.resume.file)}" download>Download resume ${icon.dl}</a>
+        <a class="btn ghost light" href="${u(RESUME)}" download>Download resume ${icon.dl}</a>
       </p>
     </div>
     <form class="form" data-mailto="${site.email}" novalidate>
@@ -441,15 +443,15 @@ ${header()}
   <section class="wrap page-head">
     <p class="label"><span>CV</span>Resume</p>
     <h1 class="display">Resume</h1>
-    <p class="lede">One page: education, technical skills, projects, extracurricular roles and achievements.</p>
+    <p class="lede">Two pages: education, technical skills, projects, extracurricular roles and achievements.</p>
     <p class="row">
-      <a class="btn" href="${u(site.resume.file)}" download>Download PDF ${icon.dl}</a>
-      <a class="btn ghost" href="${u(site.resume.file)}" target="_blank" rel="noopener">Open in new tab ${icon.ext}<span class="sr-only"> (opens in a new tab)</span></a>
+      <a class="btn" href="${u(RESUME)}" download>Download PDF ${icon.dl}</a>
+      <a class="btn ghost" href="${u(RESUME)}" target="_blank" rel="noopener">Open in new tab ${icon.ext}<span class="sr-only"> (opens in a new tab)</span></a>
     </p>
   </section>
   <section class="wrap">
-    <a class="pdf" href="${u(site.resume.file)}" target="_blank" rel="noopener" aria-label="Open the full resume PDF in a new tab">
-      ${img(site.resume.preview, { lazy: false, sizes: '(max-width: 900px) 92vw, 860px' })}
+    <a class="pdf" href="${u(RESUME)}" target="_blank" rel="noopener" aria-label="Open the full resume PDF in a new tab">
+      ${img(RESUME_PREVIEW, { lazy: false, sizes: '(max-width: 900px) 92vw, 860px' })}
     </a>
     <p class="muted small pdf-note">Preview image. Updated ${esc(site.resume.updated)}. Click to open the PDF with selectable text and working links.</p>
   </section>
