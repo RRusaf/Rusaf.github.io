@@ -90,7 +90,6 @@ function header({ home = false, crumb = '' } = {}) {
       ${NAV.map(([id, l]) => `<a href="${href(id)}" data-spy="${id}">${l}</a>`).join('')}
     </nav>
   </div>
-  <a class="mark" href="${home ? '#top' : u('/')}" aria-label="Back to top">${mark()}</a>
   <div class="nav-r">
     <span class="clock" aria-label="Local time in Dhaka"><i class="dot" aria-hidden="true"></i><span>Dhaka</span> <time data-clock>--:--</time></span>
     <button class="icon-btn theme" type="button" data-theme-toggle aria-label="Toggle dark mode">${icon.sun}${icon.moon}</button>
@@ -108,7 +107,6 @@ function header({ home = false, crumb = '' } = {}) {
 </div>`;
 }
 
-const mark = () => `<svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="currentColor"/><path d="M12 29V11h8.2c4 0 6.6 2.3 6.6 5.8 0 2.6-1.4 4.5-3.8 5.3L28 29h-4.6l-3.7-6.5H16V29zm4-10h3.8c1.8 0 2.9-.9 2.9-2.3s-1.1-2.3-2.9-2.3H16z" fill="var(--mark-ink)"/></svg>`;
 
 function footer() {
   const y = new Date().getFullYear();
