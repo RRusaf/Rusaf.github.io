@@ -125,6 +125,21 @@
     }
   }
 
+  // ── resume page preview: prev/next buttons + page counter ────────────────
+  $$('[data-pages]').forEach((box) => {
+    const track = $('.pdf-track', box), count = $('[data-page-count]', box);
+    const prev = $('[data-page-prev]', box), next = $('[data-page-next]', box);
+    if (!count) return;
+    const total = track.children.length;
+    const cur = () => Math.round(track.scrollLeft / track.clientWidth);
+    const go = (n) => track.scrollTo({ left: Math.max(0, Math.min(total - 1, n)) * track.clientWidth, behavior: reduce ? 'auto' : 'smooth' });
+    const paint = () => { const i = cur(); count.textContent = `Page ${i + 1} of ${total}`; prev.disabled = i === 0; next.disabled = i === total - 1; };
+    prev.addEventListener('click', () => go(cur() - 1));
+    next.addEventListener('click', () => go(cur() + 1));
+    track.addEventListener('scroll', paint, { passive: true });
+    paint();
+  });
+
   // ── horizontal rail: auto-advance, progress, drag ────────────────────────
   $$('[data-rail]').forEach((rail) => {
     const track = $('.rail-track', rail), bar = $('[data-rail-bar]', rail);

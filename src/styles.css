@@ -472,6 +472,12 @@ section { position: relative; }
 .pdf:hover { transform: translateY(-4px); }
 .pdf img { width: 100%; }
 .pdf-note { text-align: center; margin-top: 16px; }
+.pdf-pages { max-width: 860px; margin-inline: auto; }
+.pdf-track { display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding-block: 8px 24px; }
+.pdf-track::-webkit-scrollbar { display: none; }
+.pdf-track > .pdf { flex: 0 0 100%; scroll-snap-align: start; }
+.pdf-ctrl { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 4px; }
+.pdf-ctrl .icon-btn:disabled { opacity: .35; cursor: default; }
 
 /* ── reveal ─────────────────────────────────────────────────────────────── */
 .js .reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s var(--ease), transform .9s var(--ease); }

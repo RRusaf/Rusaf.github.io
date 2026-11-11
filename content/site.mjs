@@ -32,9 +32,12 @@ export const site = {
     file: '/assets/docs/rafsanul-haque-rusaf-resume.pdf',
     drive: drive('1CyPM7LFr2Jlq-7hxGmw5YPKnYvxiw8YA'), // [site:resume]
     updated: '2026',
-    // Image of page 1 so the preview works on phones (most mobile browsers can't embed PDFs).
-    // Regenerate it whenever the PDF changes (see README → Replace the resume).
-    preview: { src: '/assets/img/resume-page.webp', w: 1024, h: 1449, alt: 'Preview of the first page of the resume of Rafsanul Haque Rusaf' },
+    // One image per PDF page so the preview works on phones (most mobile browsers can't embed PDFs).
+    // Regenerate them whenever the PDF changes (see README → Replace the resume).
+    previews: [
+      { src: '/assets/img/resume-page.webp', w: 1024, h: 1449, alt: 'Resume of Rafsanul Haque Rusaf, page 1: contact, skills, education and achievements' },
+      { src: '/assets/img/resume-page-2.webp', w: 1024, h: 1449, alt: 'Resume of Rafsanul Haque Rusaf, page 2: extracurricular roles and projects' },
+    ],
   },
 };
 

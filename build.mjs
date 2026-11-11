@@ -46,7 +46,7 @@ const hash = (f) => crypto.createHash('md5').update(fs.readFileSync(f)).digest('
 const CSS = `/assets/styles.css?v=${hash('src/styles.css')}`;
 const JS = `/assets/main.js?v=${hash('src/main.js')}`;
 const RESUME = `${site.resume.file}?v=${hash('public' + site.resume.file)}`;
-const RESUME_PREVIEW = { ...site.resume.preview, src: `${site.resume.preview.src}?v=${hash('public' + site.resume.preview.src)}` };
+const RESUME_PAGES = site.resume.previews.map((p) => ({ ...p, src: `${p.src}?v=${hash('public' + p.src)}` }));
 
 // ── layout ─────────────────────────────────────────────────────────────────
 const NAV = [['about', 'About'], ['work', 'Work'], ['education', 'Education'], ['leadership', 'Leadership'], ['skills', 'Skills'], ['contact', 'Contact']];
@@ -450,9 +450,16 @@ ${header()}
     </p>
   </section>
   <section class="wrap">
-    <a class="pdf" href="${u(RESUME)}" target="_blank" rel="noopener" aria-label="Open the full resume PDF in a new tab">
-      ${img(RESUME_PREVIEW, { lazy: false, sizes: '(max-width: 900px) 92vw, 860px' })}
-    </a>
+    <div class="pdf-pages" data-pages>
+      <div class="pdf-track" tabindex="0" aria-label="Resume pages, scroll horizontally">
+        ${RESUME_PAGES.map((p, i) => `<a class="pdf" href="${u(RESUME)}" target="_blank" rel="noopener" aria-label="Open the full resume PDF in a new tab (page ${i + 1} preview)">${img(p, { lazy: i > 0, sizes: '(max-width: 900px) 92vw, 860px' })}</a>`).join('')}
+      </div>
+      ${RESUME_PAGES.length > 1 ? `<div class="pdf-ctrl">
+        <button class="icon-btn" type="button" data-page-prev aria-label="Previous page">${icon.arrowL}</button>
+        <span class="mono small" data-page-count aria-live="polite">Page 1 of ${RESUME_PAGES.length}</span>
+        <button class="icon-btn" type="button" data-page-next aria-label="Next page">${icon.arrow}</button>
+      </div>` : ''}
+    </div>
     <p class="muted small pdf-note">Preview image. Updated ${esc(site.resume.updated)}. Click to open the PDF with selectable text and working links.</p>
   </section>
 </main>
