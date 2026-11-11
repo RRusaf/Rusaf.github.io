@@ -34,7 +34,7 @@ export const site = {
     updated: '2026',
     // Image of page 1 so the preview works on phones (most mobile browsers can't embed PDFs).
     // Regenerate it whenever the PDF changes (see README → Replace the resume).
-    preview: { src: '/assets/img/resume-page.webp', w: 1024, h: 1479, alt: 'Preview of the one-page resume of Rafsanul Haque Rusaf' },
+    preview: { src: '/assets/img/resume-page.webp', w: 1024, h: 1449, alt: 'Preview of the first page of the resume of Rafsanul Haque Rusaf' },
   },
 };
 
