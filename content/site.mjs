@@ -44,7 +44,7 @@ export const hero = {
   // Display headline; each array item is one line.
   headline: ['Create Strategy', 'backed by data.'],
   intro:
-    'I study business at North South University and build the analytical side of it: survey research, Power BI and Excel dashboards, process prototypes and go-to-market strategy.',
+    'I study business at North South University and aspire to lead at the intersection of business, technology, and innovation, turning data into decisions and ideas into impact.',
   photo: { src: '/assets/img/portrait-hero.webp', small: ['/assets/img/portrait-hero-720.webp', 720], w: 1400, h: 1868, alt: 'Rafsanul Haque Rusaf in a black suit, walking through a covered walkway' },
 };
 
@@ -56,7 +56,6 @@ export const about = {
   objective:
     'I aspire to become a business and technology leader who drives innovation, uses data-driven decision-making, and bridges emerging technologies and strategic business solutions to create sustainable growth.',
   paragraphs: [
-    'My coursework spans Management Information Systems, statistics, accounting, economics and marketing. Outside class I put it to work: a survey-based study of credit card use in Bangladesh, strategic analysis of a commercial bank, an e-commerce storefront build, and team entries in inter-university case competitions.',
     'I learn by building. Each project on this site starts from a concrete problem, works through a recognised framework or tool, and ends with findings or a recommendation I can defend.',
   ],
   portrait: { src: '/assets/img/portrait-formal.webp', small: ['/assets/img/portrait-formal-520.webp', 520], w: 900, h: 1304, alt: 'Rafsanul Haque Rusaf in a suit and volunteer sash, standing outdoors' },
@@ -131,9 +130,9 @@ export const leadership = [
     ],
   },
   {
-    org: 'Millennium Fellowship',
+    org: 'United Nations Millennium Fellowship',
     sub: 'United Nations Academic Impact × Millennium Campus Network',
-    logo: '/assets/img/logo-millennium.webp',
+    logo: '/assets/img/logo-un.webp',
     role: 'Millennium Fellow, Campus Ambassador',
     dates: 'Class of 2026',
     kind: 'Fellowship · SDGs',
