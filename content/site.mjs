@@ -13,8 +13,8 @@ const drive = (id) => `https://drive.google.com/file/d/${id}/view`;
 
 export const site = {
   // Set this to the final domain before deploying (used for canonical, OG, sitemap).
-  url: 'https://hoaxgoat.github.io',
-  base: '/Rusaf.github.io/', // repo is a project site under hoaxgoat.github.io
+  url: 'https://rrusaf.github.io',
+  base: '/Rusaf.github.io/', // repo is a project site under rrusaf.github.io
   lang: 'en',
   name: 'Rafsanul Haque Rusaf',
   shortName: 'Rusaf',
