@@ -15,7 +15,7 @@ const LIVE_URL = site.url && !/example\./.test(site.url) ? site.url.replace(/\/$
 const esc = (s = '') => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const u = (p) => (/^(https?:|mailto:|#)/.test(p) ? p : BASE + p.replace(/^\//, ''));
 const ext = (href, label) => `<a href="${esc(href)}" target="_blank" rel="noopener noreferrer">${label}<span class="sr-only"> (opens in a new tab)</span></a>`;
-const docThumb = (d) => `<a class="doc-thumb" href="${u(d.href)}" target="_blank" rel="noopener noreferrer">${img({ ...d.img, alt: d.label })}<span class="sr-only"> (opens PDF in a new tab)</span></a>`;
+const docLink = (d) => `<span class="doc-link">${ext(u(d.href), `${esc(d.label)} ${icon.ext}`)}</span>`;
 const words = (text) => esc(text).split(/\s+/).map((w) => {
   const em = /^\*|\*[.,!?]*$/.test(w);
   return `<span class="w${em ? ' em' : ''}">${w.replace(/\*/g, '')}</span>`;
@@ -290,15 +290,15 @@ ${header({ home: true })}
         <span class="lead-meta mono">${esc(l.dates || l.kind)}</span>
         <span class="lead-x" aria-hidden="true"></span>
       </summary>
-      <div class="lead-body${l.doc ? ' has-doc' : ''}">
+      <div class="lead-body">
         <img src="${u(l.logo)}" alt="${esc(l.org)} logo" width="88" height="88" loading="lazy">
         <div>
           ${l.sub ? `<p class="muted">${esc(l.sub)}</p>` : ''}
           <p class="mono small">${esc(l.kind)}${l.dates ? ` · ${esc(l.dates)}` : ''}</p>
           <ul>${l.points.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>
+          ${l.doc ? `<p>${docLink(l.doc)}</p>` : ''}
           ${l.video ? `<div class="lead-video"><iframe src="${esc(l.video.src)}" title="${esc(l.video.title)}" loading="lazy" allow="autoplay; fullscreen" allowfullscreen></iframe></div>` : ''}
         </div>
-        ${l.doc ? docThumb(l.doc) : ''}
       </div>
     </details>`).join('')}
   </div>
@@ -322,7 +322,7 @@ ${header({ home: true })}
 <section class="achieve wrap" id="achievements" aria-labelledby="ach-title">
   ${sectionHead('07', 'Achievements & certifications', '<span id="ach-title">Recognition so far.</span>')}
   <ul class="ach-list">
-    ${achievements.map((a) => `<li class="reveal"><span class="mono small">${esc(a.type)}</span><strong>${esc(a.title)}</strong><span class="muted">${esc(a.org)}</span>${a.doc ? docThumb(a.doc) : '<span></span>'}</li>`).join('')}
+    ${achievements.map((a) => `<li class="reveal"><span class="mono small">${esc(a.type)}</span><strong>${esc(a.title)}</strong><span class="muted">${esc(a.org)}${a.doc ? `<br>${docLink(a.doc)}` : ''}</span></li>`).join('')}
   </ul>
 </section>
 
