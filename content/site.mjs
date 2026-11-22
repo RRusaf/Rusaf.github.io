@@ -152,6 +152,7 @@ export const leadership = [
   },
   {
     org: 'Nishonkoch Foundation',
+    doc: { href: '/assets/docs/nishonkoch-foundation-appointment.pdf', label: 'Appointment letter (PDF)' },
     logo: '/assets/img/logo-nishonkoch.webp',
     role: 'Campus Ambassador',
     dates: '2026 – 2027',
@@ -209,7 +210,7 @@ export const achievements = [
   { title: 'Semi-Finalist', org: 'Ad Maker Bangladesh 2026, inter-university marketing competition', type: 'Competition', note: 'Resume lists this as “Admaker Business Case Competition”.' },
   { title: 'Runner-Up, Content Creation', org: 'NSUEDC Championship 3.0', type: 'Competition', doc: { href: '/assets/docs/edc-championship-content-creation.pdf', label: 'Certificate (PDF)' } },
   { title: 'Runner-Up, Football', org: 'NSUEDC Championship 3.0', type: 'Sport' },
-  { title: 'Automate Smarter: AI Workflows in Action', org: 'Ostad, onboard training certification', type: 'Certification' },
+  { title: 'Automate Smarter: AI Workflows in Action', org: 'Ostad, onboard training certification', type: 'Certification', doc: { href: '/assets/docs/ostad-ai-workflows-certificate.pdf', label: 'Certificate (PDF)' } },
   { title: '16 Scout proficiency badges', org: 'WLFSC Scout Group', type: 'Scouting' },
   { title: 'Certificate of Appreciation, Group Scout Camp', org: 'WLFSC Scout Group', type: 'Scouting', doc: { href: '/assets/docs/wlfsc-scout-group-camp-2017.pdf', label: 'Certificate (PDF)' } },
 ];
