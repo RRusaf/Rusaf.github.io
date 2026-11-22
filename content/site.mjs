@@ -139,6 +139,8 @@ export const leadership = [
     role: 'Millennium Fellow, Campus Ambassador',
     dates: 'Class of 2026',
     kind: 'Fellowship · SDGs',
+    // Google Drive embed: file must be shared "Anyone with the link".
+    video: { src: 'https://drive.google.com/file/d/1kwttCATl2g2C9I_FbX0d7tGTPl6a_IiS/preview', title: 'Literacy Bridge: Millennium Fellowship project video' },
     points: [
       'Represented the fellowship on campus as liaison between the programme and the university community.',
       'Developed a plan of action for fellowship sessions, exchanging best practices and refining project goals.',

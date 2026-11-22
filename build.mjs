@@ -282,7 +282,7 @@ ${header({ home: true })}
 <section class="leadership wrap" id="leadership" aria-labelledby="lead-title">
   ${sectionHead('05', 'Leadership & involvement', '<span id="lead-title">Clubs, causes and responsibility.</span>', `<p class="sec-sub">Volunteer and extracurricular roles. None of these are paid employment.</p>`)}
   <div class="lead-list">
-    ${leadership.map((l, i) => `<details class="lead reveal"${i === 0 ? ' open' : ''}>
+    ${leadership.map((l, i) => `<details class="lead reveal"${i === 0 || l.video ? ' open' : ''}>
       <summary>
         <span class="lead-n mono">${pad(i + 1)}</span>
         <span class="lead-org"><span class="h3">${esc(l.org)}</span><span class="lead-role">${esc(l.role)}</span></span>
@@ -295,6 +295,7 @@ ${header({ home: true })}
           ${l.sub ? `<p class="muted">${esc(l.sub)}</p>` : ''}
           <p class="mono small">${esc(l.kind)}${l.dates ? ` · ${esc(l.dates)}` : ''}</p>
           <ul>${l.points.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>
+          ${l.video ? `<div class="lead-video"><iframe src="${esc(l.video.src)}" title="${esc(l.video.title)}" loading="lazy" allow="autoplay; fullscreen" allowfullscreen></iframe></div>` : ''}
         </div>
       </div>
     </details>`).join('')}
