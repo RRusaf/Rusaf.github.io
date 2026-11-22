@@ -72,6 +72,7 @@ export const about = {
     { src: '/assets/img/life-sashes.webp', w: 1100, h: 1081, alt: 'Students in formal wear and sashes standing outside a building' },
     { src: '/assets/img/life-trees.webp', w: 900, h: 1200, alt: 'A road under a large tree canopy at golden hour' },
     { src: '/assets/img/life-school.webp', w: 1100, h: 825, alt: 'A group of school children and volunteers outside a school building' },
+    { src: '/assets/img/life-suits.webp', w: 720, h: 960, alt: 'Seven students in formal suits taking a group selfie on campus' },
   ],
 };
 
