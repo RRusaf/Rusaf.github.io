@@ -126,7 +126,7 @@ export const leadership = [
     logo: '/assets/img/logo-un.webp',
     role: 'Millennium Fellow, Campus Ambassador',
     dates: 'Class of 2026',
-    meta: 'Present', // shown in the collapsed row instead of dates
+    meta: '2026 – Present', // shown in the collapsed row instead of dates
     kind: 'Fellowship · SDGs',
     // Google Drive embed: file must be shared "Anyone with the link".
     video: { src: 'https://drive.google.com/file/d/1kwttCATl2g2C9I_FbX0d7tGTPl6a_IiS/preview', title: 'Literacy Bridge: Millennium Fellowship project video' },
