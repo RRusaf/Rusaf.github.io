@@ -296,7 +296,6 @@ ${header({ home: true })}
           ${l.sub ? `<p class="muted">${esc(l.sub)}</p>` : ''}
           <p class="mono small">${esc(l.kind)}${l.dates ? ` · ${esc(l.dates)}` : ''}</p>
           <ul>${l.points.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>
-          ${l.doc ? `<p>${docLink(l.doc)}</p>` : ''}
           ${l.video ? `<div class="lead-video"><iframe src="${esc(l.video.src)}" title="${esc(l.video.title)}" loading="lazy" allow="autoplay; fullscreen" allowfullscreen></iframe></div>` : ''}
         </div>
       </div>

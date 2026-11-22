@@ -122,7 +122,6 @@ export const education = [
 export const leadership = [
   {
     org: 'NSU HR Club',
-    doc: { href: '/assets/docs/nsu-hr-club-appointment.pdf', label: 'Appointment letter (PDF)' },
     logo: '/assets/img/logo-hrclub.webp',
     role: 'General Member, Marketing & Sponsorship: PR',
     dates: '2026 – Present',
@@ -152,7 +151,6 @@ export const leadership = [
   },
   {
     org: 'Nishonkoch Foundation',
-    doc: { href: '/assets/docs/nishonkoch-foundation-appointment.pdf', label: 'Appointment letter (PDF)' },
     logo: '/assets/img/logo-nishonkoch.webp',
     role: 'Campus Ambassador',
     dates: '2026 – 2027',
@@ -179,7 +177,6 @@ export const leadership = [
   },
   {
     org: 'NSU Marketing & IB Club',
-    doc: { href: '/assets/docs/nsu-mibc-appointment.pdf', label: 'Appointment letter (PDF)' },
     logo: '/assets/img/logo-mib.webp',
     role: 'General Member, Sponsorship: Multimedia & Logistics',
     dates: '2025 – 2026',
