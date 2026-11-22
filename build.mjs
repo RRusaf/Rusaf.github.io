@@ -287,7 +287,7 @@ ${header({ home: true })}
       <summary>
         <span class="lead-n mono">${pad(i + 1)}</span>
         <span class="lead-org"><span class="h3">${esc(l.org)}</span><span class="lead-role">${esc(l.role)}</span></span>
-        <span class="lead-meta mono">${esc(l.dates || l.kind)}</span>
+        <span class="lead-meta mono">${esc(l.meta || l.dates || l.kind)}</span>
         <span class="lead-x" aria-hidden="true"></span>
       </summary>
       <div class="lead-body">
