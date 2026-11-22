@@ -121,6 +121,22 @@ export const education = [
 // NOTE: the resume words some roles differently (see docs/RESEARCH.md → Inconsistencies).
 export const leadership = [
   {
+    org: 'United Nations Millennium Fellowship',
+    sub: 'United Nations Academic Impact × Millennium Campus Network',
+    logo: '/assets/img/logo-un.webp',
+    role: 'Millennium Fellow, Campus Ambassador',
+    dates: 'Present',
+    kind: 'Fellowship · SDGs',
+    // Google Drive embed: file must be shared "Anyone with the link".
+    video: { src: 'https://drive.google.com/file/d/1kwttCATl2g2C9I_FbX0d7tGTPl6a_IiS/preview', title: 'Literacy Bridge: Millennium Fellowship project video' },
+    points: [
+      'Represented the fellowship on campus as liaison between the programme and the university community.',
+      'Developed a plan of action for fellowship sessions, exchanging best practices and refining project goals.',
+      'Led “Literacy Bridge”, a time-bound project focused on two Sustainable Development Goals and one UNAI principle.',
+      'Gave and received peer feedback to help fellows overcome obstacles in their individual projects.',
+    ],
+  },
+  {
     org: 'NSU HR Club',
     logo: '/assets/img/logo-hrclub.webp',
     role: 'General Member, Marketing & Sponsorship: PR',
@@ -131,22 +147,6 @@ export const leadership = [
       'Identified, approached, and secured sponsors to fund HR Club events, building external partnerships and supporting event operations.',
       'Supported stakeholder engagement, partnership development and external relations.',
       'Represented the club’s brand in PR across university and external platforms.',
-    ],
-  },
-  {
-    org: 'United Nations Millennium Fellowship',
-    sub: 'United Nations Academic Impact × Millennium Campus Network',
-    logo: '/assets/img/logo-un.webp',
-    role: 'Millennium Fellow, Campus Ambassador',
-    dates: 'Class of 2026',
-    kind: 'Fellowship · SDGs',
-    // Google Drive embed: file must be shared "Anyone with the link".
-    video: { src: 'https://drive.google.com/file/d/1kwttCATl2g2C9I_FbX0d7tGTPl6a_IiS/preview', title: 'Literacy Bridge: Millennium Fellowship project video' },
-    points: [
-      'Represented the fellowship on campus as liaison between the programme and the university community.',
-      'Developed a plan of action for fellowship sessions, exchanging best practices and refining project goals.',
-      'Led “Literacy Bridge”, a time-bound project focused on two Sustainable Development Goals and one UNAI principle.',
-      'Gave and received peer feedback to help fellows overcome obstacles in their individual projects.',
     ],
   },
   {
