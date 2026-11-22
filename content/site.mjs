@@ -121,6 +121,7 @@ export const education = [
 export const leadership = [
   {
     org: 'NSU HR Club',
+    doc: { href: '/assets/docs/nsu-hr-club-appointment.pdf', label: 'Appointment letter (PDF)' },
     logo: '/assets/img/logo-hrclub.webp',
     role: 'General Member, Marketing & Sponsorship: PR',
     dates: '2026 – Present',
@@ -176,6 +177,7 @@ export const leadership = [
   },
   {
     org: 'NSU Marketing & IB Club',
+    doc: { href: '/assets/docs/nsu-mibc-appointment.pdf', label: 'Appointment letter (PDF)' },
     logo: '/assets/img/logo-mib.webp',
     role: 'General Member, Sponsorship: Multimedia & Logistics',
     dates: '2025 – 2026',
@@ -204,11 +206,11 @@ export const leadership = [
 // ── Achievements & certifications ([cv] "Training, Certifications & Achievements")
 export const achievements = [
   { title: 'Semi-Finalist', org: 'Ad Maker Bangladesh 2026, inter-university marketing competition', type: 'Competition', note: 'Resume lists this as “Admaker Business Case Competition”.' },
-  { title: 'Runner-Up, Content Creation', org: 'NSUEDC Championship 3.0', type: 'Competition' },
+  { title: 'Runner-Up, Content Creation', org: 'NSUEDC Championship 3.0', type: 'Competition', doc: { href: '/assets/docs/edc-championship-content-creation.pdf', label: 'Certificate (PDF)' } },
   { title: 'Runner-Up, Football', org: 'NSUEDC Championship 3.0', type: 'Sport' },
   { title: 'Automate Smarter: AI Workflows in Action', org: 'Ostad, onboard training certification', type: 'Certification' },
   { title: '16 Scout proficiency badges', org: 'WLFSC Scout Group', type: 'Scouting' },
-  { title: 'Certificate of Appreciation, Group Scout Camp', org: 'WLFSC Scout Group', type: 'Scouting' },
+  { title: 'Certificate of Appreciation, Group Scout Camp', org: 'WLFSC Scout Group', type: 'Scouting', doc: { href: '/assets/docs/wlfsc-scout-group-camp-2017.pdf', label: 'Certificate (PDF)' } },
 ];
 
 // ── Testimonials ([site:home]; quoted verbatim) ─────────────────────────────
