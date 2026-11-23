@@ -134,6 +134,7 @@ export const leadership = [
       'Represented the fellowship on campus as liaison between the programme and the university community.',
       'Developed a plan of action for fellowship sessions, exchanging best practices and refining project goals.',
       'Led “Literacy Bridge”, a time-bound project focused on two Sustainable Development Goals and one UNAI principle.',
+      'Raised BDT 100,000 through crowdfunding for the Literacy Bridge project.',
       'Gave and received peer feedback to help fellows overcome obstacles in their individual projects.',
     ],
   },
